@@ -1,0 +1,28 @@
+.example-card2 {
+    max-width: 480px;
+    max-height: 270px;
+  }
+
+  .example-card2-width{
+    max-width: 440px;
+  }
+
+.carousel-selected{
+    box-shadow: 0rem 0rem 1rem 1rem rgba(0,0,0,50%);
+    z-index: 2;
+    margin-left: .8rem;
+    margin-right: .8rem;
+}
+
+.carousel-not-selected-left{
+  box-shadow: -.2rem .2rem .9rem .75rem rgba(0,0,0,30%);
+  z-index: 1;
+  // margin-top: .8rem;
+}
+
+.carousel-not-selected-right{
+  // box-shadow: .2rem .2rem .34rem .34rem rgba(0,0,0,30%);
+  box-shadow: .2rem .2rem .9rem .75rem rgba(0,0,0,30%);
+  z-index: 1;
+  // margin-top: .8rem;
+}
