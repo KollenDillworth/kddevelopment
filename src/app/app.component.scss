@@ -18,3 +18,24 @@
 .image-shadow{
     box-shadow: .7rem .5rem .32rem .1rem rgba(0,0,0,30%);
 }
+
+.bg-color{
+  background-image: url(../assets/images/main-bg.jpeg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+.bg-container{
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 575px) {
+  .bg-container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+}

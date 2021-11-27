@@ -17,12 +17,51 @@
 .carousel-not-selected-left{
   box-shadow: -.2rem .2rem .9rem .75rem rgba(0,0,0,30%);
   z-index: 1;
+  margin-right: .8rem;
   // margin-top: .8rem;
 }
+
+// .carousel-not-selected-left:hover{
+//   box-shadow: 0rem 0rem 1rem 1rem rgba(0,0,0,50%);
+//   z-index: 2;
+// }
+
+//put this is a ngclass or ngstyle and on click change the color
+.carousel-not-selected-left:hover{
+  box-shadow: 0rem 0rem 1rem 1rem rgba(236, 232, 241, 0.5);
+  z-index: 2;
+}
+
+// .carousel-not-selected-left:hover:before{
+//   box-shadow: 0rem 0rem 1rem 1rem rgba(0,0,0,50%);
+//   z-index: 2;
+// }
 
 .carousel-not-selected-right{
   // box-shadow: .2rem .2rem .34rem .34rem rgba(0,0,0,30%);
   box-shadow: .2rem .2rem .9rem .75rem rgba(0,0,0,30%);
   z-index: 1;
-  // margin-top: .8rem;
+}
+
+//leave this for onclick function after click. shows button pressed
+//.carousel-not-selected-right{
+  // box-shadow: .2rem .2rem .34rem .34rem rgba(0,0,0,30%);
+ // box-shadow: .2rem .2rem .9rem .75rem rgba(0,0,0,30%);
+ // z-index: 1;
+ // margin-top: .5rem;
+//}
+
+.carousel-not-selected-right:hover{
+  box-shadow: 0rem 0rem 1rem 1rem rgba(236, 232, 241, 0.5);
+  z-index: 2;
+}
+
+.wrapper{
+  overflow:hidden;
+  width: 620px;
+}
+
+.carousel-inner{
+  display: flex;
+  width: 1260px;
 }

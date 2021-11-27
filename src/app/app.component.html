@@ -521,70 +521,76 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<!-- Start Nav location -->
-<div style="width: 100%; height: 70px; background-color: #424242; position: absolute; top: 0;">
+<div class="bg-color">
+  
+    <!-- Start Nav location -->
+    <!-- <div style="width: 100%; height: 70px; background-color: #424242; position: absolute; top: 0;">
 
-</div>
-<!-- End Nav location -->
+    </div> -->
+    <!-- End Nav location -->
 
 
-<!-- Start Landing Screen -->
-<div class="bg-image" style="width: 100%; height: 94vh; margin-top: 70px;">
-   <div fxLayout="row" fxLayoutGap="300px" style="height: 100%; align-items: center; justify-content: center; padding: 0 15px;">
-    <div>
-      <mat-card class="example-card image-shadow">
-        <img mat-card-image src="../assets/images/me1-shadow.jpg" alt="Kollen Dillworth">
-        <mat-card-content>
-          <p>
-            I look forward to helping you build the perfect website for you needs!
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>  
-    <div fxLayout="column" style="color: white; font-size: 30px;" fxLayoutGap="20px">
+    <!-- Start Landing Screen -->
+    <div class="bg-image" style="width: 100%; height: 100vh;">
+      <div fxLayout="row" fxLayout.xs="column-reverse" fxLayoutGap="300px" fxLayoutGap.xs="20px" fxLayoutGap.sm="50px" fxLayoutGap.md="100px" style="height: 100%; align-items: center; justify-content: center; padding: 0 15px;">
         <div>
-          Welcome to
-        </div>
-        <div>
-          KDDevelopment
-        </div>
+          <mat-card class="example-card image-shadow">
+            <img mat-card-image src="../assets/images/me1-shadow.jpg" alt="Kollen Dillworth">
+            <mat-card-content>
+              <p>
+                I look forward to helping you build the perfect website for you needs!
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>  
+        <div fxLayout="column" style="color: white; font-size: 30px;" fxLayoutGap="20px">
+            <div>
+              Welcome to
+            </div>
+            <div>
+              KDDevelopment
+            </div>
+          </div>
       </div>
-   </div>
+
+    </div>
+    <!-- End Landing Screen -->
+
+
+    <div class="bg-container">
+    <!-- Start Main Content -->
+
+    <!-- About -->
+    <section style="width: 100%; margin-top: 2rem;">
+      <div>
+        <app-about></app-about>
+      </div>
+    </section>
+
+    <!-- My Work -->
+    <section style="width: 100%; margin-top: 2rem;">
+      <div>
+        <app-work></app-work>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="width: 100%; margin-top: 2rem;">
+      <div>
+        <app-testimonial></app-testimonial>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section style="width: 100%; margin-top: 2rem;">
+      <div>
+        <app-contact></app-contact>
+      </div>
+    </section>
+
+
+    <!-- End Main Content -->
+</div>
+
 
 </div>
-<!-- End Landing Screen -->
-
-
-
-<!-- Start Main Content -->
-
-<!-- About -->
-<section style="width: 100%; background-color: red;">
-  <div>
-    <app-about></app-about>
-  </div>
-</section>
-
-<!-- My Work -->
-<section style="width: 100%; background-color: purple; padding: 20px 20px 50px 20px;">
-  <div>
-    <app-work></app-work>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section style="width: 100%; background-color: blue; margin-top: 10px;">
-  <div>
-    <app-testimonial></app-testimonial>
-  </div>
-</section>
-
-<!-- Contact -->
-<section style="width: 100%; background-color: yellow;">
-  <div>
-    <app-contact></app-contact>
-  </div>
-</section>
-
-
-<!-- End Main Content -->

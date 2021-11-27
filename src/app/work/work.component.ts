@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AnimationBuilder, AnimationPlayer } from '@angular/animations';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { workItemData } from '../models/work-item-data';
+import { WorkItemModel } from '../models/work-item-model';
 
 @Component({
   selector: 'app-work',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
 
-  constructor() { }
+  workItems: WorkItemModel = workItemData;
+  @ViewChild('carousel')
+  private carousel!: ElementRef<any>;
+  private player!: AnimationPlayer;
+  
+  constructor(private builder: AnimationBuilder) { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }
