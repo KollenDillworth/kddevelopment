@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
@@ -28,7 +30,9 @@ import { ContactDialogComponent } from './contact-dialog/contact-dialog.componen
     BrowserModule,
     MatCardModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     MatDialogModule,
+    MatIconModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,

@@ -1,36 +1,60 @@
 <div>
-    <h1 class="title-text">Get Connected</h1>
+    <div *ngIf="!isFormSubmit">
+        <h1 class="title-text">Get Connected</h1> 
+    </div>
+    
+    
+    <div *ngIf="isFormSubmit">
+        <h1 class="title-text">Thank You</h1>
+    </div>
+    <div *ngIf="isLoading" class="spinner">
+        <mat-spinner color="accent"></mat-spinner>
+    </div>
     <div *ngIf="isError" style="color: rgb(255, 30, 30)">Please fill out all fields.</div>
     <mat-dialog-content>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="0px">
-        <mat-form-field color="accent" appearance="fill">
-            <mat-label>First Name</mat-label>
-            <input [(ngModel)]="contactForm.firstName" matInput>
-        </mat-form-field>
-        <mat-form-field color="accent" appearance="fill">
-            <mat-label>Last Name</mat-label>
-            <input [(ngModel)]="contactForm.lastName" matInput>
-        </mat-form-field>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="0px">
-        <mat-form-field color="accent" appearance="fill">
-            <mat-label>Email</mat-label>
-            <input [(ngModel)]="contactForm.email" matInput>
-        </mat-form-field>
-        <mat-form-field color="accent" appearance="fill">
-            <mat-label>Phone</mat-label>
-            <input [(ngModel)]="contactForm.phoneNumber" matInput>
-        </mat-form-field>
-    </div>
-    <div fxLayout="row">
-            <mat-form-field color="accent" fxFlex="100" appearance="fill">
-                <mat-label>Tell Me About Your Website.</mat-label>
-                <textarea [(ngModel)]="contactForm.message"  style="min-height: 100px; max-height: 300px;" matInput></textarea>
-              </mat-form-field>
-    </div>
+        <div *ngIf="!isFormSubmit">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="0px">
+                <mat-form-field color="accent" appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input [(ngModel)]="contactForm.firstName" matInput>
+                </mat-form-field>
+                <mat-form-field color="accent" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input [(ngModel)]="contactForm.lastName" matInput>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="0px">
+                <mat-form-field color="accent" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input [(ngModel)]="contactForm.email" matInput>
+                </mat-form-field>
+                <mat-form-field color="accent" appearance="fill">
+                    <mat-label>Phone</mat-label>
+                    <input [(ngModel)]="contactForm.phoneNumber" matInput>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                    <mat-form-field color="accent" fxFlex="100" appearance="fill">
+                        <mat-label>Tell Me About Your Website.</mat-label>
+                        <textarea [(ngModel)]="contactForm.message"  style="min-height: 100px; max-height: 300px;" matInput></textarea>
+                      </mat-form-field>
+            </div>
+            
+        </div>
+        <div *ngIf="isFormSubmit" style="align-items: center; display: flex;">
+            Your message has been sent.
+        </div>
+    
 </mat-dialog-content>
     <mat-dialog-actions align="end">
-        <button mat-button mat-dialog-close>Cancel</button>
-        <button mat-button (click)="submitForm(contactForm)" cdkFocusInitial>Install</button>
-      </mat-dialog-actions>
+        <div *ngIf="!isFormSubmit">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-raised-button (click)="submitForm(contactForm)" cdkFocusInitial>Send Message</button>
+        </div>
+        <div *ngIf="isFormSubmit">
+            <button mat-raised-button mat-dialog-close>Close</button>
+        </div>
+    </mat-dialog-actions>
 </div>
+
+

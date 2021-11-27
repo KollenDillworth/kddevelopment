@@ -65,3 +65,11 @@
   display: flex;
   width: 1260px;
 }
+
+@media screen and (max-width: 959px) {
+  .carousel-not-selected-left{
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+}
