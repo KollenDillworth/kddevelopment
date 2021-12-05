@@ -24,6 +24,7 @@ export class ContactDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Email form Using Email JS
   submitForm(contactForm){
     this.isError = false;
     if(contactForm.firstName === '' || contactForm.lastName === '' || contactForm.email === '' || contactForm.phoneNumber === '' || contactForm.message === ''){
